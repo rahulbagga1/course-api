@@ -1,0 +1,25 @@
+#server port
+server:
+  port: 9090
+
+#database configuration:sql
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testhiber
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource2:
+    driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:file:./data/coursedata
+    username: sa
+    password: password
+    h2:
+      console:
+        enabled: true
+        path: /h2
